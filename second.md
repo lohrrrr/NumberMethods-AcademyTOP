@@ -38,7 +38,7 @@ $$
 
 $$
 \[
-\delta x = \frac{\Delta x}{|x^*|} = \frac{|x - x^*|}{|x^*|}
+\Delta x = \frac{\Delta x}{|x^*|} = \frac{|x - x^*|}{|x^*|}
 \]
 $$
 
