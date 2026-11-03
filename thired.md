@@ -149,14 +149,18 @@ for x in [1e-2, 1e-4, 1e-6, 1e-8]:
 import math
 n = 10_000_000
 arr = [1.0/k for k in range(1, n+1)]
+a = 0
+for i in range(1, n+1):
+    a+=1.0/i
 
 naive   = sum(arr)                      # слева направо
 fsum    = math.fsum(arr)                # компенсированное
 reversed_sum = sum(reversed(arr))       # от малых к большим
 
-print(f"naive      = {naive:.17g}")
-print(f"reversed   = {reversed_sum:.17g}")
-print(f"fsum       = {fsum:.17g}")
+print(f"naive      = {naive:.70f}")
+print(f"reversed   = {reversed_sum:.70f}")
+print(f"a          = {a:.70f}")
+print(f"fsum       = {fsum:.25g}")
 print(f"Δ naive/fsum  = {abs(naive - fsum):.3e}")
 print(f"Δ reversed/fsum = {abs(reversed_sum - fsum):.3e}")
 ```
